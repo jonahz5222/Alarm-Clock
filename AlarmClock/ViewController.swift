@@ -1,0 +1,55 @@
+//
+//  ViewController.swift
+//  AlarmClock
+//
+//  Created by Jonah Zukosky on 1/25/18.
+//  Copyright © 2018 Zukosky, Jonah. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    var alarmArray = [Alarm]()
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return alarmArray.count
+    }
+
+    
+
+    @IBOutlet weak var alarmTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        alarmTableView.dataSource = self
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath)
+        
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        //Do stuff with selected column here
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    @IBAction func addAlarm(_ sender: Any) {
+        
+    }
+    
+}
+
