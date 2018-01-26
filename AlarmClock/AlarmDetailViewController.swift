@@ -10,10 +10,12 @@ import UIKit
 
 class AlarmDetailViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var alarm:Alarm?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        label.text = alarm?.label
     }
 
     override func didReceiveMemoryWarning() {

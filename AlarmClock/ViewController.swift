@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var alarmArray = [Alarm]()
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         alarmTableView.dataSource = self
+        alarmTableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,10 +47,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Do stuff with selected column here
         
-        let alarm = alarmArray[indexPath.row]
-        self.performSegue(withIdentifier: "alarmDetail", sender: alarm)
-        
-        
+        self.performSegue(withIdentifier: "alarmDetail", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -59,7 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AlarmDetailViewController {
-            destination.
+            destination.alarm = alarmArray[(alarmTableView.indexPathForSelectedRow?.row)!]
         }
     }
     

@@ -29,9 +29,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="pZY-cb-Har" kind="show" identifier="alarmDetail" id="pfR-Tn-39g"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -54,35 +51,42 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alarmTableView" destination="PUr-eD-mZJ" id="QYy-G7-PXC"/>
+                        <segue destination="pZY-cb-Har" kind="show" identifier="alarmDetail" id="45i-ZS-U8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="263.19999999999999" y="62.518740629685162"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm Detail View Controller-->
         <scene sceneID="csB-cB-vQU">
             <objects>
-                <viewController id="pZY-cb-Har" sceneMemberID="viewController">
+                <viewController id="pZY-cb-Har" customClass="AlarmDetailViewController" customModule="AlarmClock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EPu-da-wum">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-n6-hwu">
-                                <rect key="frame" x="140" y="323" width="14" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHl-n6-hwu">
+                                <rect key="frame" x="169.5" y="355" width="36.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aHl-n6-hwu" firstAttribute="centerY" secondItem="9tO-Qs-v42" secondAttribute="centerY" id="0ta-hS-H2a"/>
+                            <constraint firstItem="aHl-n6-hwu" firstAttribute="centerX" secondItem="9tO-Qs-v42" secondAttribute="centerX" id="lsc-nR-vOR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9tO-Qs-v42"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="aHl-n6-hwu" id="aRT-Jz-gnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIC-W0-MCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032.8" y="62.518740629685162"/>
+            <point key="canvasLocation" x="954.39999999999998" y="62.518740629685162"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7p-a4-oMs">
