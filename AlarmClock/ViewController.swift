@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     var alarmArray = [Alarm]()
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alarmArray.count
     }
@@ -37,13 +38,16 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath)
-        
+        let alarmItem = alarmArray[indexPath.row]
+        cell.textLabel?.text = alarmItem.label
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
         //Do stuff with selected column here
+        
+        performSegue(withIdentifier: "alarmDetail", sender: self)
+        
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

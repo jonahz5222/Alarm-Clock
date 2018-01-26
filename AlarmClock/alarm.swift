@@ -13,5 +13,6 @@ class Alarm {
     var repeater : NSDate? //Might want to make this an enum
     //var ringtone :
     var snoozable : Bool!
+    var label: String?
     
 }
