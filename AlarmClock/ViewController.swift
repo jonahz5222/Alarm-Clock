@@ -46,7 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Do stuff with selected column here
         
-        performSegue(withIdentifier: "alarmDetail", sender: self)
+        let alarm = alarmArray[indexPath.row]
+        self.performSegue(withIdentifier: "alarmDetail", sender: alarm)
         
         
         tableView.deselectRow(at: indexPath, animated: true)

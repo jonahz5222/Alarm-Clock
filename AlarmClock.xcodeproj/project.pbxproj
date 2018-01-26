@@ -15,6 +15,7 @@
 		8386CC1C201A9D4E00805FA5 /* AlarmClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC1B201A9D4E00805FA5 /* AlarmClockTests.swift */; };
 		8386CC27201A9D4E00805FA5 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC26201A9D4E00805FA5 /* AlarmClockUITests.swift */; };
 		8386CC35201AA01000805FA5 /* alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC34201AA01000805FA5 /* alarm.swift */; };
+		8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8386CC26201A9D4E00805FA5 /* AlarmClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockUITests.swift; sourceTree = "<group>"; };
 		8386CC28201A9D4E00805FA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8386CC34201AA01000805FA5 /* alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarm.swift; sourceTree = "<group>"; };
+		8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				8386CC08201A9D4E00805FA5 /* ViewController.swift */,
 				8386CC34201AA01000805FA5 /* alarm.swift */,
 				8386CC0A201A9D4E00805FA5 /* Main.storyboard */,
+				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				8386CC0D201A9D4E00805FA5 /* Assets.xcassets */,
 				8386CC0F201A9D4E00805FA5 /* LaunchScreen.storyboard */,
 				8386CC12201A9D4E00805FA5 /* Info.plist */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8386CC35201AA01000805FA5 /* alarm.swift in Sources */,
+				8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */,
 				8386CC09201A9D4E00805FA5 /* ViewController.swift in Sources */,
 				8386CC07201A9D4E00805FA5 /* AppDelegate.swift in Sources */,
 			);
