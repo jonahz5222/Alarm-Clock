@@ -15,4 +15,11 @@ class Alarm {
     var snoozable : Bool!
     var label: String?
     
+    init(label: String,time: NSDate,repeater: NSDate,snoozable: Bool){
+        self.label = label
+        self.time = time
+        self.repeater = repeater
+        self.snoozable = snoozable
+    }
+    
 }

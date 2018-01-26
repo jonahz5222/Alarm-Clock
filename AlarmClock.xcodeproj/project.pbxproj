@@ -103,9 +103,9 @@
 			children = (
 				8386CC06201A9D4E00805FA5 /* AppDelegate.swift */,
 				8386CC08201A9D4E00805FA5 /* ViewController.swift */,
+				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				8386CC34201AA01000805FA5 /* alarm.swift */,
 				8386CC0A201A9D4E00805FA5 /* Main.storyboard */,
-				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				8386CC0D201A9D4E00805FA5 /* Assets.xcassets */,
 				8386CC0F201A9D4E00805FA5 /* LaunchScreen.storyboard */,
 				8386CC12201A9D4E00805FA5 /* Info.plist */,

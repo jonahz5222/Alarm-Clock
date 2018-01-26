@@ -52,9 +52,17 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     @IBAction func addAlarm(_ sender: Any) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? AlarmDetailViewController {
+            destination.
+        }
+    }
+    
     
 }
 
