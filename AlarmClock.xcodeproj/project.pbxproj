@@ -16,7 +16,7 @@
 		8386CC27201A9D4E00805FA5 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC26201A9D4E00805FA5 /* AlarmClockUITests.swift */; };
 		8386CC35201AA01000805FA5 /* alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC34201AA01000805FA5 /* alarm.swift */; };
 		8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */; };
-		8386CC952020356900805FA5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC932020356900805FA5 /* Model.xcdatamodeld */; };
+		8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8386CC06201A9D4E00805FA5 /* AppDelegate.swift */,
-				8386CC932020356900805FA5 /* Model.xcdatamodeld */,
+				8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */,
 				8386CC08201A9D4E00805FA5 /* ViewController.swift */,
 				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				8386CC34201AA01000805FA5 /* alarm.swift */,
@@ -270,7 +270,7 @@
 			files = (
 				8386CC35201AA01000805FA5 /* alarm.swift in Sources */,
 				8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */,
-				8386CC952020356900805FA5 /* Model.xcdatamodeld in Sources */,
+				8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */,
 				8386CC09201A9D4E00805FA5 /* ViewController.swift in Sources */,
 				8386CC07201A9D4E00805FA5 /* AppDelegate.swift in Sources */,
 			);
@@ -566,13 +566,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8386CC932020356900805FA5 /* Model.xcdatamodeld */ = {
+		8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				8386CC942020356900805FA5 /* Model.xcdatamodel */,
 			);
 			currentVersion = 8386CC942020356900805FA5 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			path = AlarmClock.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
