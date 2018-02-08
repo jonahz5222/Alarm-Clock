@@ -17,6 +17,7 @@
 		8386CC35201AA01000805FA5 /* alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC34201AA01000805FA5 /* alarm.swift */; };
 		8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */; };
 		8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */; };
+		839430AE202D0702001A67CC /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430AD202D0702001A67CC /* AlarmTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8386CC34201AA01000805FA5 /* alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarm.swift; sourceTree = "<group>"; };
 		8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailViewController.swift; sourceTree = "<group>"; };
 		8386CC942020356900805FA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		839430AD202D0702001A67CC /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				8386CC34201AA01000805FA5 /* alarm.swift */,
 				8386CC0A201A9D4E00805FA5 /* Main.storyboard */,
+				839430AD202D0702001A67CC /* AlarmTableViewCell.swift */,
 				8386CC0D201A9D4E00805FA5 /* Assets.xcassets */,
 				8386CC0F201A9D4E00805FA5 /* LaunchScreen.storyboard */,
 				8386CC12201A9D4E00805FA5 /* Info.plist */,
@@ -273,6 +276,7 @@
 				8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */,
 				8386CC09201A9D4E00805FA5 /* ViewController.swift in Sources */,
 				8386CC07201A9D4E00805FA5 /* AppDelegate.swift in Sources */,
+				839430AE202D0702001A67CC /* AlarmTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
