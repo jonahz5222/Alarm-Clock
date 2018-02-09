@@ -13,7 +13,8 @@ class AddAlarmViewController: UIViewController {
 
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBAction func addAlarm(_ sender: Any) {
-        //timePicker
+        //timePicker.date
+        
     }
     
     override func viewDidLoad() {
