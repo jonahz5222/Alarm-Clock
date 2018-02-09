@@ -8,13 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
     var alarmArray = [Alarm]()
+    let dateFormatter = DateFormatter()
+    var timeComponents = DateComponents()
+    
+    
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return alarmArray.count
+        //return alarmArray.count
+        return 3
     }
 
     
@@ -23,6 +29,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        dateFormatter.timeStyle = .short
+        
+        timeComponents.hour = 8
+        timeComponents.minute = 30
+        
+        let userCalendar = Calendar.current
+        let someTime = userCalendar.date(from: timeComponents)
+        
+        
+        
+        let alarm1 = Alarm.init(label: "alarm1",time: someTime!, snoozable: true)
+        let alarm2 = Alarm.init(label: "alarm2",time: someTime!, snoozable: true)
+        let alarm3 = Alarm.init(label: "alarm3",time: someTime!, snoozable: true)
+        alarmArray.append(alarm1)
+        alarmArray.append(alarm2)
+        alarmArray.append(alarm3)
+        
         
         alarmTableView.dataSource = self
         alarmTableView.delegate = self
@@ -38,10 +63,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath) as! AlarmTableViewCell
         let alarmItem = alarmArray[indexPath.row]
-        cell.textLabel?.text = alarmItem.label
+        cell.nameLabel.text = alarmItem.label
         
+        
+        let time = dateFormatter.string(from: alarmItem.time)
+        
+        cell.timeLabel.text = time
+        
+        
+        
+
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -51,8 +84,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    @IBAction func addAlarm(_ sender: Any) {
-        
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

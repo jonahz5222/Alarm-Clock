@@ -11,7 +11,7 @@ import UIKit
 class AlarmTableViewCell: UITableViewCell {
 
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var meridianLabel: UILabel!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var repeatLabel: UILabel!
     @IBOutlet weak var onOffSwitch: UISwitch!

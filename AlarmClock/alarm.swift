@@ -9,16 +9,16 @@
 import Foundation
 
 class Alarm {
-    var time : NSDate?
-    var repeater : NSDate? //Might want to make this an enum
+    var time : Date
+    //var repeater : Date? //Might want to make this an enum
     //var ringtone :
     var snoozable : Bool!
     var label: String?
     
-    init(label: String,time: NSDate,repeater: NSDate,snoozable: Bool){
+    init(label: String,time: Date,snoozable: Bool){
         self.label = label
         self.time = time
-        self.repeater = repeater
+        //self.repeater = repeater
         self.snoozable = snoozable
     }
     

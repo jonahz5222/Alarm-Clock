@@ -18,6 +18,7 @@
 		8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */; };
 		8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */; };
 		839430AE202D0702001A67CC /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430AD202D0702001A67CC /* AlarmTableViewCell.swift */; };
+		839430B2202D0DE7001A67CC /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B1202D0DE7001A67CC /* AddAlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailViewController.swift; sourceTree = "<group>"; };
 		8386CC942020356900805FA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		839430AD202D0702001A67CC /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
+		839430B1202D0DE7001A67CC /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +107,12 @@
 		8386CC05201A9D4D00805FA5 /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
-				8386CC06201A9D4E00805FA5 /* AppDelegate.swift */,
-				8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */,
-				8386CC08201A9D4E00805FA5 /* ViewController.swift */,
-				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
-				8386CC34201AA01000805FA5 /* alarm.swift */,
+				839430B3202D2017001A67CC /* View Controllers */,
 				8386CC0A201A9D4E00805FA5 /* Main.storyboard */,
+				8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */,
+				8386CC34201AA01000805FA5 /* alarm.swift */,
 				839430AD202D0702001A67CC /* AlarmTableViewCell.swift */,
+				8386CC06201A9D4E00805FA5 /* AppDelegate.swift */,
 				8386CC0D201A9D4E00805FA5 /* Assets.xcassets */,
 				8386CC0F201A9D4E00805FA5 /* LaunchScreen.storyboard */,
 				8386CC12201A9D4E00805FA5 /* Info.plist */,
@@ -135,6 +136,16 @@
 				8386CC28201A9D4E00805FA5 /* Info.plist */,
 			);
 			path = AlarmClockUITests;
+			sourceTree = "<group>";
+		};
+		839430B3202D2017001A67CC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8386CC08201A9D4E00805FA5 /* ViewController.swift */,
+				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
+				839430B1202D0DE7001A67CC /* AddAlarmViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			files = (
 				8386CC35201AA01000805FA5 /* alarm.swift in Sources */,
 				8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */,
+				839430B2202D0DE7001A67CC /* AddAlarmViewController.swift in Sources */,
 				8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */,
 				8386CC09201A9D4E00805FA5 /* ViewController.swift in Sources */,
 				8386CC07201A9D4E00805FA5 /* AppDelegate.swift in Sources */,
