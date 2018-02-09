@@ -41,9 +41,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         
         
-        let alarm1 = Alarm.init(label: "alarm1",time: someTime!, snoozable: true)
-        let alarm2 = Alarm.init(label: "alarm2",time: someTime!, snoozable: true)
-        let alarm3 = Alarm.init(label: "alarm3",time: someTime!, snoozable: true)
+        let alarm1 = Alarm.init(label: "alarm1",time: someTime!)
+        let alarm2 = Alarm.init(label: "alarm2",time: someTime!)
+        let alarm3 = Alarm.init(label: "alarm3",time: someTime!)
         alarmArray.append(alarm1)
         alarmArray.append(alarm2)
         alarmArray.append(alarm3)
@@ -72,9 +72,6 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         cell.timeLabel.text = time
         
-        
-        
-
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -92,6 +89,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         if let destination = segue.destination as? AlarmDetailViewController {
             destination.alarm = alarmArray[(alarmTableView.indexPathForSelectedRow?.row)!]
         }
+        
+        let backItem = UIBarButtonItem()
+        backItem.title = "Cancel"
+        navigationItem.backBarButtonItem = backItem
     }
     
     

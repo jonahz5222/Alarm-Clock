@@ -12,14 +12,14 @@ class Alarm {
     var time : Date
     //var repeater : Date? //Might want to make this an enum
     //var ringtone :
-    var snoozable : Bool!
+    //var snoozable : Bool!
     var label: String?
     
-    init(label: String,time: Date,snoozable: Bool){
+    init(label: String,time: Date){
         self.label = label
         self.time = time
         //self.repeater = repeater
-        self.snoozable = snoozable
+        //self.snoozable = snoozable
     }
     
 }
