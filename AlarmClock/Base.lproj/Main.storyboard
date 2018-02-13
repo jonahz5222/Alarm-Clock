@@ -86,6 +86,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FXO-YW-59h"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sUn-Xl-BA3"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,12 +142,17 @@
                         <viewLayoutGuide key="safeArea" id="EKI-uY-Kqp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Alarms" id="Wt4-Ip-KSM">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="6XG-6N-cVn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="6XG-6N-cVn">
+                            <connections>
+                                <segue destination="CHU-qJ-Z6r" kind="unwind" unwindAction="saveAlarmDetail:" id="8iG-yA-iR1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BGL-zY-eyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CHU-qJ-Z6r" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="-231"/>
+            <point key="canvasLocation" x="1071" y="-233"/>
         </scene>
         <!--Add Alarm-->
         <scene sceneID="M6s-IO-9J3">
@@ -304,7 +313,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="npV-vs-22R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bnT-vu-MhH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1821.5999999999999" y="-232.53373313343329"/>
+            <point key="canvasLocation" x="1865" y="-233"/>
         </scene>
         <!--Edit Alarm-->
         <scene sceneID="csB-cB-vQU">
@@ -329,13 +338,18 @@
                         <viewLayoutGuide key="safeArea" id="9tO-Qs-v42"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Alarm" id="5kC-Ih-6wY">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="mkd-Zt-7nG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="mkd-Zt-7nG">
+                            <connections>
+                                <segue destination="0fh-RX-djd" kind="unwind" unwindAction="saveAlarmDetail:" id="Thy-u1-Tbs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="label" destination="aHl-n6-hwu" id="aRT-Jz-gnZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIC-W0-MCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0fh-RX-djd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1049" y="453"/>
         </scene>

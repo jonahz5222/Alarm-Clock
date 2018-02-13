@@ -50,8 +50,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         alarmArray.append(alarm3)
         
         
-        alarmTableView.dataSource = self
-        alarmTableView.delegate = self
+//        alarmTableView.dataSource = self
+//        alarmTableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -147,9 +147,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
 }
 
-//extension ViewController {
-//    
-//    @IBAction func saveAlarmDetail(_ segue: UIStoryboardSegue) {
-//    }
-//}
+extension ViewController {
+    
+    @IBAction func saveAlarmDetail(_ segue: UIStoryboardSegue) {
+    }
+}
 
