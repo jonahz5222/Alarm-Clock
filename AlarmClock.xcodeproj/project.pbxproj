@@ -14,11 +14,12 @@
 		8386CC11201A9D4E00805FA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8386CC0F201A9D4E00805FA5 /* LaunchScreen.storyboard */; };
 		8386CC1C201A9D4E00805FA5 /* AlarmClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC1B201A9D4E00805FA5 /* AlarmClockTests.swift */; };
 		8386CC27201A9D4E00805FA5 /* AlarmClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC26201A9D4E00805FA5 /* AlarmClockUITests.swift */; };
-		8386CC35201AA01000805FA5 /* alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC34201AA01000805FA5 /* alarm.swift */; };
+		8386CC35201AA01000805FA5 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC34201AA01000805FA5 /* Alarm.swift */; };
 		8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */; };
 		8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */; };
 		839430AE202D0702001A67CC /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430AD202D0702001A67CC /* AlarmTableViewCell.swift */; };
 		839430B5202E12A1001A67CC /* AddAlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */; };
+		839430B820336E2E001A67CC /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B720336E2E001A67CC /* Repeater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +53,12 @@
 		8386CC22201A9D4E00805FA5 /* AlarmClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8386CC26201A9D4E00805FA5 /* AlarmClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockUITests.swift; sourceTree = "<group>"; };
 		8386CC28201A9D4E00805FA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8386CC34201AA01000805FA5 /* alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarm.swift; sourceTree = "<group>"; };
+		8386CC34201AA01000805FA5 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailViewController.swift; sourceTree = "<group>"; };
 		8386CC942020356900805FA5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		839430AD202D0702001A67CC /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmTableViewController.swift; sourceTree = "<group>"; };
+		839430B720336E2E001A67CC /* Repeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				839430B3202D2017001A67CC /* View Controllers */,
+				839430B620336DD2001A67CC /* Model */,
 				8386CC0A201A9D4E00805FA5 /* Main.storyboard */,
 				8386CC932020356900805FA5 /* AlarmClock.xcdatamodeld */,
-				8386CC34201AA01000805FA5 /* alarm.swift */,
 				839430AD202D0702001A67CC /* AlarmTableViewCell.swift */,
 				8386CC06201A9D4E00805FA5 /* AppDelegate.swift */,
 				8386CC0D201A9D4E00805FA5 /* Assets.xcassets */,
@@ -146,6 +148,15 @@
 				839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		839430B620336DD2001A67CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8386CC34201AA01000805FA5 /* Alarm.swift */,
+				839430B720336E2E001A67CC /* Repeater.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8386CC35201AA01000805FA5 /* alarm.swift in Sources */,
+				8386CC35201AA01000805FA5 /* Alarm.swift in Sources */,
+				839430B820336E2E001A67CC /* Repeater.swift in Sources */,
 				8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */,
 				839430B5202E12A1001A67CC /* AddAlarmTableViewController.swift in Sources */,
 				8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */,

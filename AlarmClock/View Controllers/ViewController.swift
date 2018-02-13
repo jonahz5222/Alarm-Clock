@@ -40,10 +40,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         let someTime = userCalendar.date(from: timeComponents)
         
         
+        let repeatArray = [Repeater.monday,.tuesday,.wednesday,.thursday,.friday]
         
-        let alarm1 = Alarm.init(label: "alarm1",time: someTime!)
-        let alarm2 = Alarm.init(label: "alarm2",time: someTime!)
-        let alarm3 = Alarm.init(label: "alarm3",time: someTime!)
+        let alarm1 = Alarm.init(label: "alarm1",time: someTime!,repeats: repeatArray)
+        let alarm2 = Alarm.init(label: "alarm2",time: someTime!,repeats: repeatArray)
+        let alarm3 = Alarm.init(label: "alarm3",time: someTime!,repeats: repeatArray)
         alarmArray.append(alarm1)
         alarmArray.append(alarm2)
         alarmArray.append(alarm3)
@@ -65,12 +66,56 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmCell", for: indexPath) as! AlarmTableViewCell
         let alarmItem = alarmArray[indexPath.row]
+        
         cell.nameLabel.text = alarmItem.label
+        cell.timeLabel.text = dateFormatter.string(from: alarmItem.time)
         
         
-        let time = dateFormatter.string(from: alarmItem.time)
         
-        cell.timeLabel.text = time
+        if alarmItem.repeats.contains(.monday) &&
+            alarmItem.repeats.contains(.tuesday) &&
+            alarmItem.repeats.contains(.wednesday) &&
+            alarmItem.repeats.contains(.thursday) &&
+            alarmItem.repeats.contains(.friday) &&
+            alarmItem.repeats.contains(.saturday) &&
+            alarmItem.repeats.contains(.sunday){
+            
+            cell.repeatLabel.text = "Every Day"
+            
+        }else if alarmItem.repeats.contains(.monday) &&
+            alarmItem.repeats.contains(.tuesday) &&
+            alarmItem.repeats.contains(.wednesday) &&
+            alarmItem.repeats.contains(.thursday) &&
+            alarmItem.repeats.contains(.friday){
+            
+            cell.repeatLabel.text = "Every Weekday"
+        }else {
+            
+        
+            for day in alarmItem.repeats {
+
+                switch day {
+                    
+                case .monday :
+                    cell.repeatLabel.text = "Mon "
+                case .tuesday :
+                    cell.repeatLabel.text = "Tue "
+                case .wednesday :
+                    cell.repeatLabel.text = "Wed "
+                case .thursday :
+                    cell.repeatLabel.text = "Thu "
+                case .friday :
+                    cell.repeatLabel.text = "Fri "
+                case .saturday :
+                    cell.repeatLabel.text = "Sat "
+                case .sunday :
+                    cell.repeatLabel.text = "Sun "
+                }
+            }
+            
+        }
+        
+        
         
         return cell
     }
@@ -84,6 +129,10 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
+    
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? AlarmDetailViewController {

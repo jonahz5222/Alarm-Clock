@@ -16,6 +16,7 @@ class AlarmDetailViewController: UIViewController {
         super.viewDidLoad()
 
         label.text = alarm?.label
+        
     }
 
     override func didReceiveMemoryWarning() {

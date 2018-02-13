@@ -10,15 +10,15 @@ import Foundation
 
 class Alarm {
     var time : Date
-    //var repeater : Date? //Might want to make this an enum
-    //var ringtone :
+    var repeats : [Repeater]
     //var snoozable : Bool!
     var label: String?
     
-    init(label: String,time: Date){
+    init(label: String,time: Date,repeats: [Repeater]){
         self.label = label
         self.time = time
-        //self.repeater = repeater
+        self.repeats = repeats
+        
         //self.snoozable = snoozable
     }
     
