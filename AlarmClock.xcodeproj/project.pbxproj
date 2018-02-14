@@ -21,6 +21,8 @@
 		839430B5202E12A1001A67CC /* AddAlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */; };
 		839430B820336E2E001A67CC /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B720336E2E001A67CC /* Repeater.swift */; };
 		839430BA20337761001A67CC /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430B920337761001A67CC /* AddAlarmViewController.swift */; };
+		839430BC2033BA82001A67CC /* SetRepeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430BB2033BA82001A67CC /* SetRepeatViewController.swift */; };
+		839430C02033BADC001A67CC /* SetRepeatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839430BF2033BADC001A67CC /* SetRepeatTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmTableViewController.swift; sourceTree = "<group>"; };
 		839430B720336E2E001A67CC /* Repeater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
 		839430B920337761001A67CC /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		839430BB2033BA82001A67CC /* SetRepeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepeatViewController.swift; sourceTree = "<group>"; };
+		839430BF2033BADC001A67CC /* SetRepeatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRepeatTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				8386CC36201B9D6500805FA5 /* AlarmDetailViewController.swift */,
 				839430B4202E12A1001A67CC /* AddAlarmTableViewController.swift */,
 				839430B920337761001A67CC /* AddAlarmViewController.swift */,
+				839430BB2033BA82001A67CC /* SetRepeatViewController.swift */,
+				839430BF2033BADC001A67CC /* SetRepeatTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -300,10 +306,12 @@
 				839430B820336E2E001A67CC /* Repeater.swift in Sources */,
 				8386CC37201B9D6500805FA5 /* AlarmDetailViewController.swift in Sources */,
 				839430BA20337761001A67CC /* AddAlarmViewController.swift in Sources */,
+				839430BC2033BA82001A67CC /* SetRepeatViewController.swift in Sources */,
 				839430B5202E12A1001A67CC /* AddAlarmTableViewController.swift in Sources */,
 				8386CC952020356900805FA5 /* AlarmClock.xcdatamodeld in Sources */,
 				8386CC09201A9D4E00805FA5 /* ViewController.swift in Sources */,
 				8386CC07201A9D4E00805FA5 /* AppDelegate.swift in Sources */,
+				839430C02033BADC001A67CC /* SetRepeatTableViewController.swift in Sources */,
 				839430AE202D0702001A67CC /* AlarmTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

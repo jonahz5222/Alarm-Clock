@@ -1,20 +1,19 @@
 //
-//  AddAlarmTableViewController.swift
+//  SetRepeatTableViewController.swift
 //  AlarmClock
 //
-//  Created by Jonah Zukosky on 2/9/18.
+//  Created by Jonah Zukosky on 2/13/18.
 //  Copyright © 2018 Zukosky, Jonah. All rights reserved.
 //
 
 import UIKit
 
-class AddAlarmTableViewController: UITableViewController {
+class SetRepeatTableViewController: UITableViewController {
 
-    @IBOutlet weak var timePicker: UIDatePicker!
-    
+    @IBOutlet var repeatTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        repeatTableView.allowsMultipleSelection = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,37 +30,14 @@ class AddAlarmTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        switch section {
-        case 0 :
-            return 1
-        case 1 :
-            return 3
-        default :
-            return 1
-        }
+        return 7
     }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Do stuff with selected column here
-        
-            switch indexPath.row {
-            case 1 :
-                self.performSegue(withIdentifier: "repeatSegue", sender: self)
-            case 2 :
-                self.performSegue(withIdentifier: "alarmDetail", sender: self)
-            default :
-                print("uh oh")
-            }
-        
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
